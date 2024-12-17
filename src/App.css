@@ -1,0 +1,76 @@
+/* standards ________________________________________________________________*/
+* {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: none;
+  /* font-size: 1rem; */
+  font-weight: normal;
+  line-height: 1.5;
+}
+:root {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --black010: rgba(0, 0, 0, 0.1);
+  --black050: rgba(0, 0, 0, 0.5);
+  --gray010: rgba(128, 128, 128, 0.1);
+  --gray050: rgba(128, 128, 128, 0.5);
+  --white010: rgba(255, 255, 255, 0.1);
+  --white050: rgba(255, 255, 255, 0.5);
+  --accent: lightsteelblue;
+  --shadow: 0 0 0.5rem var(--black050);
+  --dark-bg-color: rgb(33, 33, 33);
+  --dark-color: rgb(222, 222, 222);
+  background-color: var(--dark-bg-color);
+  color: var(--dark-color);
+}
+
+/* ------------------------------------------------------------------------- */
+
+* {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.game {
+  padding: 1rem;
+  display: grid;
+  grid-template: repeat(3, 10rem) / repeat(3, 10rem);
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.card {
+  outline: 1px solid var(--dark-color);
+}
+
+img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.loading {
+  font-size: 2rem;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
